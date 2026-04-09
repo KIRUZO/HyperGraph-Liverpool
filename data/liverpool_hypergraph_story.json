@@ -1,0 +1,3055 @@
+{
+  "match": {
+    "id": 2499743,
+    "title": "Liverpool 4-0 Arsenal",
+    "season": "Premier League 2017/18",
+    "date": "2017-08-27",
+    "venue": "Anfield",
+    "score": "4-0",
+    "focusTeam": "Liverpool",
+    "opponent": "Arsenal",
+    "dataSource": "Wyscout open event data (processed by koenvo/wyscout-soccer-match-event-dataset)"
+  },
+  "legend": {
+    "hypergraph": "Each translucent shape is one coordinated Liverpool attacking phase.",
+    "graph": "Pairwise links only show the pass-to-pass skeleton of the same move."
+  },
+  "players": [
+    {
+      "id": 18550,
+      "name": "E. Can",
+      "role": "Midfielder",
+      "avgX": 63.71,
+      "avgY": 51.29,
+      "phaseCount": 8
+    },
+    {
+      "id": 120353,
+      "name": "Mohamed Salah",
+      "role": "Forward",
+      "avgX": 71,
+      "avgY": 53.13,
+      "phaseCount": 8
+    },
+    {
+      "id": 15808,
+      "name": "Roberto Firmino",
+      "role": "Forward",
+      "avgX": 57.73,
+      "avgY": 49.36,
+      "phaseCount": 8
+    },
+    {
+      "id": 257899,
+      "name": "J. Gomez",
+      "role": "Defender",
+      "avgX": 48.4,
+      "avgY": 84.3,
+      "phaseCount": 7
+    },
+    {
+      "id": 116,
+      "name": "G. Wijnaldum",
+      "role": "Midfielder",
+      "avgX": 69.78,
+      "avgY": 35,
+      "phaseCount": 5
+    },
+    {
+      "id": 25747,
+      "name": "S. Mané",
+      "role": "Forward",
+      "avgX": 86.83,
+      "avgY": 34,
+      "phaseCount": 5
+    },
+    {
+      "id": 7964,
+      "name": "J. Henderson",
+      "role": "Midfielder",
+      "avgX": 70.8,
+      "avgY": 51.2,
+      "phaseCount": 4
+    },
+    {
+      "id": 14870,
+      "name": "J. Matip",
+      "role": "Defender",
+      "avgX": 30.75,
+      "avgY": 61,
+      "phaseCount": 4
+    },
+    {
+      "id": 15175,
+      "name": "L. Karius",
+      "role": "Goalkeeper",
+      "avgX": 4.4,
+      "avgY": 23.4,
+      "phaseCount": 4
+    },
+    {
+      "id": 4908,
+      "name": "Alberto Moreno",
+      "role": "Defender",
+      "avgX": 83.5,
+      "avgY": 11.5,
+      "phaseCount": 2
+    },
+    {
+      "id": 7907,
+      "name": "D. Sturridge",
+      "role": "Forward",
+      "avgX": 83.33,
+      "avgY": 67.33,
+      "phaseCount": 2
+    },
+    {
+      "id": 25393,
+      "name": "D. Lovren",
+      "role": "Defender",
+      "avgX": 38,
+      "avgY": 32,
+      "phaseCount": 1
+    },
+    {
+      "id": 8319,
+      "name": "J. Milner",
+      "role": "Midfielder",
+      "avgX": 53.67,
+      "avgY": 12.33,
+      "phaseCount": 1
+    },
+    {
+      "id": 237268,
+      "name": "M. Grujić",
+      "role": "Midfielder",
+      "avgX": 41.5,
+      "avgY": 64,
+      "phaseCount": 1
+    }
+  ],
+  "phases": [
+    {
+      "id": "phase-01",
+      "label": "1H 5' E. Can finishes the move",
+      "minute": "5'",
+      "absoluteSecond": 316.64,
+      "period": "1H",
+      "startSecond": 292.86,
+      "duration": 23.79,
+      "outcome": "shot",
+      "lane": "center",
+      "pattern": "wide delivery",
+      "shotPlayerId": 18550,
+      "shotPlayerName": "E. Can",
+      "players": [
+        18550,
+        120353,
+        14870,
+        25747,
+        4908
+      ],
+      "uniquePlayerCount": 5,
+      "eventCount": 9,
+      "progression": 42,
+      "impactScore": 71,
+      "links": [
+        {
+          "source": 18550,
+          "target": 120353,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 120353,
+          "target": 14870,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 14870,
+          "target": 120353,
+          "kind": "pass",
+          "subEventName": "High pass"
+        },
+        {
+          "source": 120353,
+          "target": 25747,
+          "kind": "pass",
+          "subEventName": "Cross"
+        },
+        {
+          "source": 25747,
+          "target": 4908,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 4908,
+          "target": 18550,
+          "kind": "pass",
+          "subEventName": "Cross"
+        }
+      ],
+      "events": [
+        {
+          "absoluteSecond": 292.86,
+          "second": 292.86,
+          "minute": "4'",
+          "period": "1H",
+          "playerId": 18550,
+          "playerName": "E. Can",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 48,
+            "y": 51
+          },
+          "end": {
+            "x": 60,
+            "y": 74
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 294.51,
+          "second": 294.51,
+          "minute": "4'",
+          "period": "1H",
+          "playerId": 120353,
+          "playerName": "Mohamed Salah",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 60,
+            "y": 74
+          },
+          "end": {
+            "x": 41,
+            "y": 77
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 297.32,
+          "second": 297.32,
+          "minute": "4'",
+          "period": "1H",
+          "playerId": 14870,
+          "playerName": "J. Matip",
+          "eventName": "Pass",
+          "subEventName": "High pass",
+          "start": {
+            "x": 41,
+            "y": 77
+          },
+          "end": {
+            "x": 19,
+            "y": 15
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 303.39,
+          "second": 303.39,
+          "minute": "5'",
+          "period": "1H",
+          "playerId": 120353,
+          "playerName": "Mohamed Salah",
+          "eventName": "Duel",
+          "subEventName": "Ground attacking duel",
+          "start": {
+            "x": 92,
+            "y": 73
+          },
+          "end": {
+            "x": 86,
+            "y": 74
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 305.77,
+          "second": 305.77,
+          "minute": "5'",
+          "period": "1H",
+          "playerId": 120353,
+          "playerName": "Mohamed Salah",
+          "eventName": "Pass",
+          "subEventName": "Cross",
+          "start": {
+            "x": 86,
+            "y": 74
+          },
+          "end": {
+            "x": 92,
+            "y": 19
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 311.02,
+          "second": 311.02,
+          "minute": "5'",
+          "period": "1H",
+          "playerId": 25747,
+          "playerName": "S. Mané",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 92,
+            "y": 19
+          },
+          "end": {
+            "x": 85,
+            "y": 10
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 314.19,
+          "second": 314.19,
+          "minute": "5'",
+          "period": "1H",
+          "playerId": 4908,
+          "playerName": "Alberto Moreno",
+          "eventName": "Pass",
+          "subEventName": "Cross",
+          "start": {
+            "x": 85,
+            "y": 10
+          },
+          "end": {
+            "x": 91,
+            "y": 67
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 315.16,
+          "second": 315.16,
+          "minute": "5'",
+          "period": "1H",
+          "playerId": 18550,
+          "playerName": "E. Can",
+          "eventName": "Duel",
+          "subEventName": "Air duel",
+          "start": {
+            "x": 91,
+            "y": 67
+          },
+          "end": {
+            "x": 90,
+            "y": 67
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 316.64,
+          "second": 316.64,
+          "minute": "5'",
+          "period": "1H",
+          "playerId": 18550,
+          "playerName": "E. Can",
+          "eventName": "Shot",
+          "subEventName": "Shot",
+          "start": {
+            "x": 90,
+            "y": 67
+          },
+          "end": {
+            "x": 0,
+            "y": 0
+          },
+          "isShot": true,
+          "isGoal": false
+        }
+      ],
+      "comparison": {
+        "hyperedgeOrder": 5,
+        "graphEdgeCount": 6,
+        "potentialPairCount": 10,
+        "higherOrderDelta": 4,
+        "connectivityRatio": 0.6,
+        "progression": 42,
+        "duration": 23.79
+      }
+    },
+    {
+      "id": "phase-02",
+      "label": "1H 9' Mohamed Salah finishes the move",
+      "minute": "9'",
+      "absoluteSecond": 582.1,
+      "period": "1H",
+      "startSecond": 565.98,
+      "duration": 16.11,
+      "outcome": "shot",
+      "lane": "left",
+      "pattern": "wide delivery",
+      "shotPlayerId": 120353,
+      "shotPlayerName": "Mohamed Salah",
+      "players": [
+        25747,
+        116,
+        4908,
+        18550,
+        15808,
+        120353
+      ],
+      "uniquePlayerCount": 6,
+      "eventCount": 9,
+      "progression": 16,
+      "impactScore": 49,
+      "links": [
+        {
+          "source": 25747,
+          "target": 116,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 116,
+          "target": 4908,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 4908,
+          "target": 116,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 116,
+          "target": 18550,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 18550,
+          "target": 15808,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 15808,
+          "target": 18550,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 18550,
+          "target": 120353,
+          "kind": "pass",
+          "subEventName": "Cross"
+        }
+      ],
+      "events": [
+        {
+          "absoluteSecond": 565.98,
+          "second": 565.98,
+          "minute": "9'",
+          "period": "1H",
+          "playerId": 25747,
+          "playerName": "S. Mané",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 78,
+            "y": 32
+          },
+          "end": {
+            "x": 95,
+            "y": 16
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 569.22,
+          "second": 569.22,
+          "minute": "9'",
+          "period": "1H",
+          "playerId": 116,
+          "playerName": "G. Wijnaldum",
+          "eventName": "Duel",
+          "subEventName": "Ground attacking duel",
+          "start": {
+            "x": 95,
+            "y": 16
+          },
+          "end": {
+            "x": 77,
+            "y": 14
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 572.83,
+          "second": 572.83,
+          "minute": "9'",
+          "period": "1H",
+          "playerId": 116,
+          "playerName": "G. Wijnaldum",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 77,
+            "y": 14
+          },
+          "end": {
+            "x": 82,
+            "y": 13
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 575.08,
+          "second": 575.08,
+          "minute": "9'",
+          "period": "1H",
+          "playerId": 4908,
+          "playerName": "Alberto Moreno",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 82,
+            "y": 13
+          },
+          "end": {
+            "x": 81,
+            "y": 20
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 576.77,
+          "second": 576.77,
+          "minute": "9'",
+          "period": "1H",
+          "playerId": 116,
+          "playerName": "G. Wijnaldum",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 81,
+            "y": 20
+          },
+          "end": {
+            "x": 76,
+            "y": 19
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 578.69,
+          "second": 578.69,
+          "minute": "9'",
+          "period": "1H",
+          "playerId": 18550,
+          "playerName": "E. Can",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 76,
+            "y": 19
+          },
+          "end": {
+            "x": 75,
+            "y": 29
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 579.58,
+          "second": 579.58,
+          "minute": "9'",
+          "period": "1H",
+          "playerId": 15808,
+          "playerName": "Roberto Firmino",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 75,
+            "y": 29
+          },
+          "end": {
+            "x": 87,
+            "y": 24
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 580.65,
+          "second": 580.65,
+          "minute": "9'",
+          "period": "1H",
+          "playerId": 18550,
+          "playerName": "E. Can",
+          "eventName": "Pass",
+          "subEventName": "Cross",
+          "start": {
+            "x": 87,
+            "y": 24
+          },
+          "end": {
+            "x": 94,
+            "y": 75
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 582.1,
+          "second": 582.1,
+          "minute": "9'",
+          "period": "1H",
+          "playerId": 120353,
+          "playerName": "Mohamed Salah",
+          "eventName": "Shot",
+          "subEventName": "Shot",
+          "start": {
+            "x": 94,
+            "y": 75
+          },
+          "end": {
+            "x": 0,
+            "y": 0
+          },
+          "isShot": true,
+          "isGoal": false
+        }
+      ],
+      "comparison": {
+        "hyperedgeOrder": 6,
+        "graphEdgeCount": 7,
+        "potentialPairCount": 15,
+        "higherOrderDelta": 8,
+        "connectivityRatio": 0.47,
+        "progression": 16,
+        "duration": 16.11
+      }
+    },
+    {
+      "id": "phase-03",
+      "label": "1H 16' Roberto Firmino finishes the move",
+      "minute": "16'",
+      "absoluteSecond": 979.76,
+      "period": "1H",
+      "startSecond": 968.95,
+      "duration": 10.81,
+      "outcome": "goal",
+      "lane": "right",
+      "pattern": "wide delivery",
+      "shotPlayerId": 15808,
+      "shotPlayerName": "Roberto Firmino",
+      "players": [
+        257899,
+        120353,
+        18550,
+        15808
+      ],
+      "uniquePlayerCount": 4,
+      "eventCount": 6,
+      "progression": 26,
+      "impactScore": 88,
+      "links": [
+        {
+          "source": 120353,
+          "target": 257899,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 257899,
+          "target": 18550,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 18550,
+          "target": 257899,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 257899,
+          "target": 15808,
+          "kind": "pass",
+          "subEventName": "Cross"
+        }
+      ],
+      "events": [
+        {
+          "absoluteSecond": 968.95,
+          "second": 968.95,
+          "minute": "16'",
+          "period": "1H",
+          "playerId": 257899,
+          "playerName": "J. Gomez",
+          "eventName": "Duel",
+          "subEventName": "Ground loose ball duel",
+          "start": {
+            "x": 66,
+            "y": 92
+          },
+          "end": {
+            "x": 69,
+            "y": 93
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 971.17,
+          "second": 971.17,
+          "minute": "16'",
+          "period": "1H",
+          "playerId": 120353,
+          "playerName": "Mohamed Salah",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 69,
+            "y": 93
+          },
+          "end": {
+            "x": 83,
+            "y": 94
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 972.48,
+          "second": 972.48,
+          "minute": "16'",
+          "period": "1H",
+          "playerId": 257899,
+          "playerName": "J. Gomez",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 83,
+            "y": 94
+          },
+          "end": {
+            "x": 73,
+            "y": 77
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 975.59,
+          "second": 975.59,
+          "minute": "16'",
+          "period": "1H",
+          "playerId": 18550,
+          "playerName": "E. Can",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 73,
+            "y": 77
+          },
+          "end": {
+            "x": 23,
+            "y": 22
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 977.72,
+          "second": 977.72,
+          "minute": "16'",
+          "period": "1H",
+          "playerId": 257899,
+          "playerName": "J. Gomez",
+          "eventName": "Pass",
+          "subEventName": "Cross",
+          "start": {
+            "x": 89,
+            "y": 89
+          },
+          "end": {
+            "x": 92,
+            "y": 47
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 979.76,
+          "second": 979.76,
+          "minute": "16'",
+          "period": "1H",
+          "playerId": 15808,
+          "playerName": "Roberto Firmino",
+          "eventName": "Shot",
+          "subEventName": "Shot",
+          "start": {
+            "x": 92,
+            "y": 47
+          },
+          "end": {
+            "x": 0,
+            "y": 0
+          },
+          "isShot": true,
+          "isGoal": true
+        }
+      ],
+      "comparison": {
+        "hyperedgeOrder": 4,
+        "graphEdgeCount": 4,
+        "potentialPairCount": 6,
+        "higherOrderDelta": 2,
+        "connectivityRatio": 0.67,
+        "progression": 26,
+        "duration": 10.81
+      }
+    },
+    {
+      "id": "phase-04",
+      "label": "1H 24' Mohamed Salah finishes the move",
+      "minute": "24'",
+      "absoluteSecond": 1482.04,
+      "period": "1H",
+      "startSecond": 1470.72,
+      "duration": 11.32,
+      "outcome": "shot",
+      "lane": "right",
+      "pattern": "combination play",
+      "shotPlayerId": 120353,
+      "shotPlayerName": "Mohamed Salah",
+      "players": [
+        14870,
+        18550,
+        116,
+        120353
+      ],
+      "uniquePlayerCount": 4,
+      "eventCount": 5,
+      "progression": 62,
+      "impactScore": 83,
+      "links": [
+        {
+          "source": 18550,
+          "target": 116,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 116,
+          "target": 120353,
+          "kind": "pass",
+          "subEventName": "High pass"
+        }
+      ],
+      "events": [
+        {
+          "absoluteSecond": 1470.72,
+          "second": 1470.72,
+          "minute": "24'",
+          "period": "1H",
+          "playerId": 14870,
+          "playerName": "J. Matip",
+          "eventName": "Others on the ball",
+          "subEventName": "Touch",
+          "start": {
+            "x": 26,
+            "y": 70
+          },
+          "end": {
+            "x": 30,
+            "y": 55
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 1472.46,
+          "second": 1472.46,
+          "minute": "24'",
+          "period": "1H",
+          "playerId": 18550,
+          "playerName": "E. Can",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 30,
+            "y": 55
+          },
+          "end": {
+            "x": 42,
+            "y": 75
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 1475.65,
+          "second": 1475.65,
+          "minute": "24'",
+          "period": "1H",
+          "playerId": 116,
+          "playerName": "G. Wijnaldum",
+          "eventName": "Pass",
+          "subEventName": "High pass",
+          "start": {
+            "x": 42,
+            "y": 75
+          },
+          "end": {
+            "x": 88,
+            "y": 73
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 1480.95,
+          "second": 1480.95,
+          "minute": "24'",
+          "period": "1H",
+          "playerId": 120353,
+          "playerName": "Mohamed Salah",
+          "eventName": "Duel",
+          "subEventName": "Ground attacking duel",
+          "start": {
+            "x": 88,
+            "y": 73
+          },
+          "end": {
+            "x": 88,
+            "y": 70
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 1482.04,
+          "second": 1482.04,
+          "minute": "24'",
+          "period": "1H",
+          "playerId": 120353,
+          "playerName": "Mohamed Salah",
+          "eventName": "Shot",
+          "subEventName": "Shot",
+          "start": {
+            "x": 88,
+            "y": 70
+          },
+          "end": {
+            "x": 0,
+            "y": 0
+          },
+          "isShot": true,
+          "isGoal": false
+        }
+      ],
+      "comparison": {
+        "hyperedgeOrder": 4,
+        "graphEdgeCount": 2,
+        "potentialPairCount": 6,
+        "higherOrderDelta": 4,
+        "connectivityRatio": 0.33,
+        "progression": 62,
+        "duration": 11.32
+      }
+    },
+    {
+      "id": "phase-05",
+      "label": "1H 31' S. Mané finishes the move",
+      "minute": "31'",
+      "absoluteSecond": 1885.15,
+      "period": "1H",
+      "startSecond": 1863.11,
+      "duration": 22.04,
+      "outcome": "shot",
+      "lane": "center",
+      "pattern": "layered buildup",
+      "shotPlayerId": 25747,
+      "shotPlayerName": "S. Mané",
+      "players": [
+        25393,
+        116,
+        15808,
+        7964,
+        257899,
+        25747
+      ],
+      "uniquePlayerCount": 6,
+      "eventCount": 9,
+      "progression": 50,
+      "impactScore": 83,
+      "links": [
+        {
+          "source": 25393,
+          "target": 116,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 116,
+          "target": 15808,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 15808,
+          "target": 7964,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 7964,
+          "target": 257899,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 257899,
+          "target": 7964,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 7964,
+          "target": 116,
+          "kind": "pass",
+          "subEventName": "High pass"
+        }
+      ],
+      "events": [
+        {
+          "absoluteSecond": 1863.11,
+          "second": 1863.11,
+          "minute": "31'",
+          "period": "1H",
+          "playerId": 25393,
+          "playerName": "D. Lovren",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 38,
+            "y": 32
+          },
+          "end": {
+            "x": 63,
+            "y": 17
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 1864.34,
+          "second": 1864.34,
+          "minute": "31'",
+          "period": "1H",
+          "playerId": 116,
+          "playerName": "G. Wijnaldum",
+          "eventName": "Others on the ball",
+          "subEventName": "Touch",
+          "start": {
+            "x": 63,
+            "y": 17
+          },
+          "end": {
+            "x": 76,
+            "y": 28
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 1869.12,
+          "second": 1869.12,
+          "minute": "31'",
+          "period": "1H",
+          "playerId": 116,
+          "playerName": "G. Wijnaldum",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 76,
+            "y": 28
+          },
+          "end": {
+            "x": 69,
+            "y": 6
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 1872.91,
+          "second": 1872.91,
+          "minute": "31'",
+          "period": "1H",
+          "playerId": 15808,
+          "playerName": "Roberto Firmino",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 69,
+            "y": 6
+          },
+          "end": {
+            "x": 70,
+            "y": 38
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 1875.01,
+          "second": 1875.01,
+          "minute": "31'",
+          "period": "1H",
+          "playerId": 7964,
+          "playerName": "J. Henderson",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 70,
+            "y": 38
+          },
+          "end": {
+            "x": 73,
+            "y": 90
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 1879.09,
+          "second": 1879.09,
+          "minute": "31'",
+          "period": "1H",
+          "playerId": 257899,
+          "playerName": "J. Gomez",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 73,
+            "y": 90
+          },
+          "end": {
+            "x": 71,
+            "y": 73
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 1881.46,
+          "second": 1881.46,
+          "minute": "31'",
+          "period": "1H",
+          "playerId": 7964,
+          "playerName": "J. Henderson",
+          "eventName": "Pass",
+          "subEventName": "High pass",
+          "start": {
+            "x": 71,
+            "y": 73
+          },
+          "end": {
+            "x": 94,
+            "y": 33
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 1883.9,
+          "second": 1883.9,
+          "minute": "31'",
+          "period": "1H",
+          "playerId": 116,
+          "playerName": "G. Wijnaldum",
+          "eventName": "Duel",
+          "subEventName": "Air duel",
+          "start": {
+            "x": 94,
+            "y": 33
+          },
+          "end": {
+            "x": 88,
+            "y": 41
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 1885.15,
+          "second": 1885.15,
+          "minute": "31'",
+          "period": "1H",
+          "playerId": 25747,
+          "playerName": "S. Mané",
+          "eventName": "Shot",
+          "subEventName": "Shot",
+          "start": {
+            "x": 88,
+            "y": 41
+          },
+          "end": {
+            "x": 0,
+            "y": 0
+          },
+          "isShot": true,
+          "isGoal": false
+        }
+      ],
+      "comparison": {
+        "hyperedgeOrder": 6,
+        "graphEdgeCount": 6,
+        "potentialPairCount": 15,
+        "higherOrderDelta": 9,
+        "connectivityRatio": 0.4,
+        "progression": 50,
+        "duration": 22.04
+      }
+    },
+    {
+      "id": "phase-06",
+      "label": "1H 33' G. Wijnaldum finishes the move",
+      "minute": "33'",
+      "absoluteSecond": 2022.59,
+      "period": "1H",
+      "startSecond": 2019.1,
+      "duration": 3.49,
+      "outcome": "shot",
+      "lane": "center",
+      "pattern": "combination play",
+      "shotPlayerId": 116,
+      "shotPlayerName": "G. Wijnaldum",
+      "players": [
+        7964,
+        15808,
+        116
+      ],
+      "uniquePlayerCount": 3,
+      "eventCount": 3,
+      "progression": -20,
+      "impactScore": 15.0,
+      "links": [],
+      "events": [
+        {
+          "absoluteSecond": 2019.1,
+          "second": 2019.1,
+          "minute": "33'",
+          "period": "1H",
+          "playerId": 7964,
+          "playerName": "J. Henderson",
+          "eventName": "Free Kick",
+          "subEventName": "Corner",
+          "start": {
+            "x": 100,
+            "y": 100
+          },
+          "end": {
+            "x": 23,
+            "y": 15
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 2020.52,
+          "second": 2020.52,
+          "minute": "33'",
+          "period": "1H",
+          "playerId": 15808,
+          "playerName": "Roberto Firmino",
+          "eventName": "Duel",
+          "subEventName": "Air duel",
+          "start": {
+            "x": 23,
+            "y": 15
+          },
+          "end": {
+            "x": 93,
+            "y": 48
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 2022.59,
+          "second": 2022.59,
+          "minute": "33'",
+          "period": "1H",
+          "playerId": 116,
+          "playerName": "G. Wijnaldum",
+          "eventName": "Shot",
+          "subEventName": "Shot",
+          "start": {
+            "x": 80,
+            "y": 56
+          },
+          "end": {
+            "x": 0,
+            "y": 0
+          },
+          "isShot": true,
+          "isGoal": false
+        }
+      ],
+      "comparison": {
+        "hyperedgeOrder": 3,
+        "graphEdgeCount": 0,
+        "potentialPairCount": 3,
+        "higherOrderDelta": 3,
+        "connectivityRatio": 0.0,
+        "progression": -20,
+        "duration": 3.49
+      }
+    },
+    {
+      "id": "phase-07",
+      "label": "1H 34' Roberto Firmino finishes the move",
+      "minute": "34'",
+      "absoluteSecond": 2083.85,
+      "period": "1H",
+      "startSecond": 2068.02,
+      "duration": 15.83,
+      "outcome": "shot",
+      "lane": "left",
+      "pattern": "combination play",
+      "shotPlayerId": 15808,
+      "shotPlayerName": "Roberto Firmino",
+      "players": [
+        15175,
+        257899,
+        18550,
+        15808
+      ],
+      "uniquePlayerCount": 4,
+      "eventCount": 5,
+      "progression": 63,
+      "impactScore": 84,
+      "links": [
+        {
+          "source": 257899,
+          "target": 18550,
+          "kind": "pass",
+          "subEventName": "High pass"
+        },
+        {
+          "source": 18550,
+          "target": 15808,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        }
+      ],
+      "events": [
+        {
+          "absoluteSecond": 2068.02,
+          "second": 2068.02,
+          "minute": "34'",
+          "period": "1H",
+          "playerId": 15175,
+          "playerName": "L. Karius",
+          "eventName": "Free Kick",
+          "subEventName": "Free Kick",
+          "start": {
+            "x": 11,
+            "y": 56
+          },
+          "end": {
+            "x": 28,
+            "y": 85
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 2073.42,
+          "second": 2073.42,
+          "minute": "34'",
+          "period": "1H",
+          "playerId": 257899,
+          "playerName": "J. Gomez",
+          "eventName": "Pass",
+          "subEventName": "High pass",
+          "start": {
+            "x": 28,
+            "y": 85
+          },
+          "end": {
+            "x": 72,
+            "y": 24
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 2081.06,
+          "second": 2081.06,
+          "minute": "34'",
+          "period": "1H",
+          "playerId": 18550,
+          "playerName": "E. Can",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 65,
+            "y": 39
+          },
+          "end": {
+            "x": 72,
+            "y": 46
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 2083.09,
+          "second": 2083.09,
+          "minute": "34'",
+          "period": "1H",
+          "playerId": 15808,
+          "playerName": "Roberto Firmino",
+          "eventName": "Duel",
+          "subEventName": "Ground attacking duel",
+          "start": {
+            "x": 72,
+            "y": 46
+          },
+          "end": {
+            "x": 74,
+            "y": 50
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 2083.85,
+          "second": 2083.85,
+          "minute": "34'",
+          "period": "1H",
+          "playerId": 15808,
+          "playerName": "Roberto Firmino",
+          "eventName": "Shot",
+          "subEventName": "Shot",
+          "start": {
+            "x": 74,
+            "y": 50
+          },
+          "end": {
+            "x": 0,
+            "y": 0
+          },
+          "isShot": true,
+          "isGoal": false
+        }
+      ],
+      "comparison": {
+        "hyperedgeOrder": 4,
+        "graphEdgeCount": 2,
+        "potentialPairCount": 6,
+        "higherOrderDelta": 4,
+        "connectivityRatio": 0.33,
+        "progression": 63,
+        "duration": 15.83
+      }
+    },
+    {
+      "id": "phase-08",
+      "label": "1H 39' S. Mané finishes the move",
+      "minute": "39'",
+      "absoluteSecond": 2357.56,
+      "period": "1H",
+      "startSecond": 2343.75,
+      "duration": 13.82,
+      "outcome": "goal",
+      "lane": "left",
+      "pattern": "combination play",
+      "shotPlayerId": 25747,
+      "shotPlayerName": "S. Mané",
+      "players": [
+        257899,
+        116,
+        18550,
+        15808,
+        25747
+      ],
+      "uniquePlayerCount": 5,
+      "eventCount": 6,
+      "progression": 74,
+      "impactScore": 140,
+      "links": [
+        {
+          "source": 257899,
+          "target": 116,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 116,
+          "target": 18550,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 18550,
+          "target": 15808,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 15808,
+          "target": 25747,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        }
+      ],
+      "events": [
+        {
+          "absoluteSecond": 2343.75,
+          "second": 2343.75,
+          "minute": "39'",
+          "period": "1H",
+          "playerId": 257899,
+          "playerName": "J. Gomez",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 13,
+            "y": 73
+          },
+          "end": {
+            "x": 20,
+            "y": 56
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 2345.06,
+          "second": 2345.06,
+          "minute": "39'",
+          "period": "1H",
+          "playerId": 116,
+          "playerName": "G. Wijnaldum",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 20,
+            "y": 56
+          },
+          "end": {
+            "x": 33,
+            "y": 52
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 2348.38,
+          "second": 2348.38,
+          "minute": "39'",
+          "period": "1H",
+          "playerId": 18550,
+          "playerName": "E. Can",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 33,
+            "y": 52
+          },
+          "end": {
+            "x": 60,
+            "y": 35
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 2351.78,
+          "second": 2351.78,
+          "minute": "39'",
+          "period": "1H",
+          "playerId": 15808,
+          "playerName": "Roberto Firmino",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 60,
+            "y": 35
+          },
+          "end": {
+            "x": 89,
+            "y": 28
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 2356.58,
+          "second": 2356.58,
+          "minute": "39'",
+          "period": "1H",
+          "playerId": 25747,
+          "playerName": "S. Mané",
+          "eventName": "Duel",
+          "subEventName": "Ground attacking duel",
+          "start": {
+            "x": 89,
+            "y": 28
+          },
+          "end": {
+            "x": 87,
+            "y": 30
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 2357.56,
+          "second": 2357.56,
+          "minute": "39'",
+          "period": "1H",
+          "playerId": 25747,
+          "playerName": "S. Mané",
+          "eventName": "Shot",
+          "subEventName": "Shot",
+          "start": {
+            "x": 87,
+            "y": 30
+          },
+          "end": {
+            "x": 0,
+            "y": 0
+          },
+          "isShot": true,
+          "isGoal": true
+        }
+      ],
+      "comparison": {
+        "hyperedgeOrder": 5,
+        "graphEdgeCount": 4,
+        "potentialPairCount": 10,
+        "higherOrderDelta": 6,
+        "connectivityRatio": 0.4,
+        "progression": 74,
+        "duration": 13.82
+      }
+    },
+    {
+      "id": "phase-09",
+      "label": "2H 56' Mohamed Salah finishes the move",
+      "minute": "56'",
+      "absoluteSecond": 3387.73,
+      "period": "2H",
+      "startSecond": 3376.96,
+      "duration": 10.77,
+      "outcome": "goal",
+      "lane": "center",
+      "pattern": "direct break",
+      "shotPlayerId": 120353,
+      "shotPlayerName": "Mohamed Salah",
+      "players": [
+        14870,
+        120353
+      ],
+      "uniquePlayerCount": 2,
+      "eventCount": 4,
+      "progression": 77,
+      "impactScore": 129,
+      "links": [],
+      "events": [
+        {
+          "absoluteSecond": 3376.96,
+          "second": 676.96,
+          "minute": "56'",
+          "period": "2H",
+          "playerId": 14870,
+          "playerName": "J. Matip",
+          "eventName": "Others on the ball",
+          "subEventName": "Clearance",
+          "start": {
+            "x": 10,
+            "y": 45
+          },
+          "end": {
+            "x": 34,
+            "y": 33
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 3380.28,
+          "second": 680.28,
+          "minute": "56'",
+          "period": "2H",
+          "playerId": 120353,
+          "playerName": "Mohamed Salah",
+          "eventName": "Duel",
+          "subEventName": "Ground attacking duel",
+          "start": {
+            "x": 32,
+            "y": 44
+          },
+          "end": {
+            "x": 42,
+            "y": 42
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 3382.62,
+          "second": 682.62,
+          "minute": "56'",
+          "period": "2H",
+          "playerId": 120353,
+          "playerName": "Mohamed Salah",
+          "eventName": "Others on the ball",
+          "subEventName": "Acceleration",
+          "start": {
+            "x": 42,
+            "y": 42
+          },
+          "end": {
+            "x": 87,
+            "y": 42
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 3387.73,
+          "second": 687.73,
+          "minute": "56'",
+          "period": "2H",
+          "playerId": 120353,
+          "playerName": "Mohamed Salah",
+          "eventName": "Shot",
+          "subEventName": "Shot",
+          "start": {
+            "x": 87,
+            "y": 42
+          },
+          "end": {
+            "x": 0,
+            "y": 0
+          },
+          "isShot": true,
+          "isGoal": true
+        }
+      ],
+      "comparison": {
+        "hyperedgeOrder": 2,
+        "graphEdgeCount": 0,
+        "potentialPairCount": 1,
+        "higherOrderDelta": 1,
+        "connectivityRatio": 0.0,
+        "progression": 77,
+        "duration": 10.77
+      }
+    },
+    {
+      "id": "phase-10",
+      "label": "2H 60' E. Can finishes the move",
+      "minute": "60'",
+      "absoluteSecond": 3612.66,
+      "period": "2H",
+      "startSecond": 3594.08,
+      "duration": 18.58,
+      "outcome": "shot",
+      "lane": "center",
+      "pattern": "combination play",
+      "shotPlayerId": 18550,
+      "shotPlayerName": "E. Can",
+      "players": [
+        15175,
+        7964,
+        18550,
+        14870,
+        257899
+      ],
+      "uniquePlayerCount": 5,
+      "eventCount": 6,
+      "progression": 74,
+      "impactScore": 100,
+      "links": [
+        {
+          "source": 7964,
+          "target": 18550,
+          "kind": "pass",
+          "subEventName": "High pass"
+        },
+        {
+          "source": 18550,
+          "target": 14870,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 14870,
+          "target": 257899,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 257899,
+          "target": 18550,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        }
+      ],
+      "events": [
+        {
+          "absoluteSecond": 3594.08,
+          "second": 894.08,
+          "minute": "59'",
+          "period": "2H",
+          "playerId": 15175,
+          "playerName": "L. Karius",
+          "eventName": "Free Kick",
+          "subEventName": "Goal kick",
+          "start": {
+            "x": 0,
+            "y": 0
+          },
+          "end": {
+            "x": 53,
+            "y": 28
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 3597.95,
+          "second": 897.95,
+          "minute": "59'",
+          "period": "2H",
+          "playerId": 7964,
+          "playerName": "J. Henderson",
+          "eventName": "Pass",
+          "subEventName": "High pass",
+          "start": {
+            "x": 53,
+            "y": 28
+          },
+          "end": {
+            "x": 72,
+            "y": 38
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 3607.33,
+          "second": 907.33,
+          "minute": "60'",
+          "period": "2H",
+          "playerId": 18550,
+          "playerName": "E. Can",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 58,
+            "y": 52
+          },
+          "end": {
+            "x": 46,
+            "y": 52
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 3608.78,
+          "second": 908.78,
+          "minute": "60'",
+          "period": "2H",
+          "playerId": 14870,
+          "playerName": "J. Matip",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 46,
+            "y": 52
+          },
+          "end": {
+            "x": 52,
+            "y": 76
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 3611.22,
+          "second": 911.22,
+          "minute": "60'",
+          "period": "2H",
+          "playerId": 257899,
+          "playerName": "J. Gomez",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 52,
+            "y": 76
+          },
+          "end": {
+            "x": 74,
+            "y": 77
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 3612.66,
+          "second": 912.66,
+          "minute": "60'",
+          "period": "2H",
+          "playerId": 18550,
+          "playerName": "E. Can",
+          "eventName": "Shot",
+          "subEventName": "Shot",
+          "start": {
+            "x": 74,
+            "y": 77
+          },
+          "end": {
+            "x": 0,
+            "y": 0
+          },
+          "isShot": true,
+          "isGoal": false
+        }
+      ],
+      "comparison": {
+        "hyperedgeOrder": 5,
+        "graphEdgeCount": 4,
+        "potentialPairCount": 10,
+        "higherOrderDelta": 6,
+        "connectivityRatio": 0.4,
+        "progression": 74,
+        "duration": 18.58
+      }
+    },
+    {
+      "id": "phase-11",
+      "label": "2H 69' S. Mané finishes the move",
+      "minute": "69'",
+      "absoluteSecond": 4151.54,
+      "period": "2H",
+      "startSecond": 4129.92,
+      "duration": 21.62,
+      "outcome": "shot",
+      "lane": "center",
+      "pattern": "through-ball move",
+      "shotPlayerId": 25747,
+      "shotPlayerName": "S. Mané",
+      "players": [
+        15175,
+        257899,
+        15808,
+        120353,
+        25747
+      ],
+      "uniquePlayerCount": 5,
+      "eventCount": 8,
+      "progression": 87,
+      "impactScore": 115,
+      "links": [
+        {
+          "source": 257899,
+          "target": 15175,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 15175,
+          "target": 15808,
+          "kind": "pass",
+          "subEventName": "Launch"
+        },
+        {
+          "source": 120353,
+          "target": 25747,
+          "kind": "pass",
+          "subEventName": "Smart pass"
+        }
+      ],
+      "events": [
+        {
+          "absoluteSecond": 4129.92,
+          "second": 1429.92,
+          "minute": "68'",
+          "period": "2H",
+          "playerId": 15175,
+          "playerName": "L. Karius",
+          "eventName": "Free Kick",
+          "subEventName": "Goal kick",
+          "start": {
+            "x": 0,
+            "y": 0
+          },
+          "end": {
+            "x": 46,
+            "y": 69
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 4135.66,
+          "second": 1435.66,
+          "minute": "68'",
+          "period": "2H",
+          "playerId": 257899,
+          "playerName": "J. Gomez",
+          "eventName": "Duel",
+          "subEventName": "Ground defending duel",
+          "start": {
+            "x": 41,
+            "y": 79
+          },
+          "end": {
+            "x": 17,
+            "y": 88
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 4139.16,
+          "second": 1439.16,
+          "minute": "68'",
+          "period": "2H",
+          "playerId": 257899,
+          "playerName": "J. Gomez",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 17,
+            "y": 88
+          },
+          "end": {
+            "x": 11,
+            "y": 61
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 4141.55,
+          "second": 1441.55,
+          "minute": "69'",
+          "period": "2H",
+          "playerId": 15175,
+          "playerName": "L. Karius",
+          "eventName": "Pass",
+          "subEventName": "Launch",
+          "start": {
+            "x": 11,
+            "y": 61
+          },
+          "end": {
+            "x": 65,
+            "y": 75
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 4144.39,
+          "second": 1444.39,
+          "minute": "69'",
+          "period": "2H",
+          "playerId": 15808,
+          "playerName": "Roberto Firmino",
+          "eventName": "Duel",
+          "subEventName": "Air duel",
+          "start": {
+            "x": 65,
+            "y": 75
+          },
+          "end": {
+            "x": 18,
+            "y": 19
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 4145.75,
+          "second": 1445.75,
+          "minute": "69'",
+          "period": "2H",
+          "playerId": 120353,
+          "playerName": "Mohamed Salah",
+          "eventName": "Duel",
+          "subEventName": "Ground loose ball duel",
+          "start": {
+            "x": 18,
+            "y": 19
+          },
+          "end": {
+            "x": 63,
+            "y": 55
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 4147.94,
+          "second": 1447.94,
+          "minute": "69'",
+          "period": "2H",
+          "playerId": 120353,
+          "playerName": "Mohamed Salah",
+          "eventName": "Pass",
+          "subEventName": "Smart pass",
+          "start": {
+            "x": 63,
+            "y": 55
+          },
+          "end": {
+            "x": 76,
+            "y": 56
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 4151.54,
+          "second": 1451.54,
+          "minute": "69'",
+          "period": "2H",
+          "playerId": 25747,
+          "playerName": "S. Mané",
+          "eventName": "Shot",
+          "subEventName": "Shot",
+          "start": {
+            "x": 87,
+            "y": 54
+          },
+          "end": {
+            "x": 0,
+            "y": 0
+          },
+          "isShot": true,
+          "isGoal": false
+        }
+      ],
+      "comparison": {
+        "hyperedgeOrder": 5,
+        "graphEdgeCount": 3,
+        "potentialPairCount": 10,
+        "higherOrderDelta": 7,
+        "connectivityRatio": 0.3,
+        "progression": 87,
+        "duration": 21.62
+      }
+    },
+    {
+      "id": "phase-12",
+      "label": "2H 76' D. Sturridge finishes the move",
+      "minute": "76'",
+      "absoluteSecond": 4618.19,
+      "period": "2H",
+      "startSecond": 4600.9,
+      "duration": 17.29,
+      "outcome": "goal",
+      "lane": "left",
+      "pattern": "wide delivery",
+      "shotPlayerId": 7907,
+      "shotPlayerName": "D. Sturridge",
+      "players": [
+        15808,
+        257899,
+        18550,
+        120353,
+        7907
+      ],
+      "uniquePlayerCount": 5,
+      "eventCount": 9,
+      "progression": 62,
+      "impactScore": 131,
+      "links": [
+        {
+          "source": 15808,
+          "target": 257899,
+          "kind": "pass",
+          "subEventName": "Head pass"
+        },
+        {
+          "source": 257899,
+          "target": 15808,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 15808,
+          "target": 18550,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 18550,
+          "target": 120353,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 120353,
+          "target": 7907,
+          "kind": "pass",
+          "subEventName": "Cross"
+        }
+      ],
+      "events": [
+        {
+          "absoluteSecond": 4600.9,
+          "second": 1900.9,
+          "minute": "76'",
+          "period": "2H",
+          "playerId": 15808,
+          "playerName": "Roberto Firmino",
+          "eventName": "Pass",
+          "subEventName": "Head pass",
+          "start": {
+            "x": 33,
+            "y": 68
+          },
+          "end": {
+            "x": 22,
+            "y": 77
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 4602.75,
+          "second": 1902.75,
+          "minute": "76'",
+          "period": "2H",
+          "playerId": 257899,
+          "playerName": "J. Gomez",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 22,
+            "y": 77
+          },
+          "end": {
+            "x": 33,
+            "y": 94
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 4605.69,
+          "second": 1905.69,
+          "minute": "76'",
+          "period": "2H",
+          "playerId": 15808,
+          "playerName": "Roberto Firmino",
+          "eventName": "Duel",
+          "subEventName": "Ground attacking duel",
+          "start": {
+            "x": 33,
+            "y": 94
+          },
+          "end": {
+            "x": 39,
+            "y": 78
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 4607.35,
+          "second": 1907.35,
+          "minute": "76'",
+          "period": "2H",
+          "playerId": 15808,
+          "playerName": "Roberto Firmino",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 39,
+            "y": 78
+          },
+          "end": {
+            "x": 49,
+            "y": 61
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 4609.79,
+          "second": 1909.79,
+          "minute": "76'",
+          "period": "2H",
+          "playerId": 18550,
+          "playerName": "E. Can",
+          "eventName": "Duel",
+          "subEventName": "Ground attacking duel",
+          "start": {
+            "x": 49,
+            "y": 61
+          },
+          "end": {
+            "x": 46,
+            "y": 54
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 4612.55,
+          "second": 1912.55,
+          "minute": "76'",
+          "period": "2H",
+          "playerId": 18550,
+          "playerName": "E. Can",
+          "eventName": "Others on the ball",
+          "subEventName": "Acceleration",
+          "start": {
+            "x": 46,
+            "y": 54
+          },
+          "end": {
+            "x": 72,
+            "y": 23
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 4615.06,
+          "second": 1915.06,
+          "minute": "76'",
+          "period": "2H",
+          "playerId": 18550,
+          "playerName": "E. Can",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 72,
+            "y": 23
+          },
+          "end": {
+            "x": 88,
+            "y": 17
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 4617.01,
+          "second": 1917.01,
+          "minute": "76'",
+          "period": "2H",
+          "playerId": 120353,
+          "playerName": "Mohamed Salah",
+          "eventName": "Pass",
+          "subEventName": "Cross",
+          "start": {
+            "x": 88,
+            "y": 17
+          },
+          "end": {
+            "x": 95,
+            "y": 56
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 4618.19,
+          "second": 1918.19,
+          "minute": "76'",
+          "period": "2H",
+          "playerId": 7907,
+          "playerName": "D. Sturridge",
+          "eventName": "Shot",
+          "subEventName": "Shot",
+          "start": {
+            "x": 95,
+            "y": 56
+          },
+          "end": {
+            "x": 0,
+            "y": 0
+          },
+          "isShot": true,
+          "isGoal": true
+        }
+      ],
+      "comparison": {
+        "hyperedgeOrder": 5,
+        "graphEdgeCount": 5,
+        "potentialPairCount": 10,
+        "higherOrderDelta": 5,
+        "connectivityRatio": 0.5,
+        "progression": 62,
+        "duration": 17.29
+      }
+    },
+    {
+      "id": "phase-13",
+      "label": "2H 86' D. Sturridge finishes the move",
+      "minute": "86'",
+      "absoluteSecond": 5187.56,
+      "period": "2H",
+      "startSecond": 5171.09,
+      "duration": 16.47,
+      "outcome": "shot",
+      "lane": "right",
+      "pattern": "vertical burst",
+      "shotPlayerId": 7907,
+      "shotPlayerName": "D. Sturridge",
+      "players": [
+        15175,
+        237268,
+        7907
+      ],
+      "uniquePlayerCount": 3,
+      "eventCount": 5,
+      "progression": 77,
+      "impactScore": 94,
+      "links": [
+        {
+          "source": 237268,
+          "target": 7907,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        }
+      ],
+      "events": [
+        {
+          "absoluteSecond": 5171.09,
+          "second": 2471.09,
+          "minute": "86'",
+          "period": "2H",
+          "playerId": 15175,
+          "playerName": "L. Karius",
+          "eventName": "Goalkeeper leaving line",
+          "subEventName": "Goalkeeper leaving line",
+          "start": {
+            "x": 0,
+            "y": 0
+          },
+          "end": {
+            "x": 0,
+            "y": 0
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 5178.82,
+          "second": 2478.82,
+          "minute": "86'",
+          "period": "2H",
+          "playerId": 237268,
+          "playerName": "M. Grujić",
+          "eventName": "Others on the ball",
+          "subEventName": "Acceleration",
+          "start": {
+            "x": 26,
+            "y": 60
+          },
+          "end": {
+            "x": 57,
+            "y": 68
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 5180.29,
+          "second": 2480.29,
+          "minute": "86'",
+          "period": "2H",
+          "playerId": 237268,
+          "playerName": "M. Grujić",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 57,
+            "y": 68
+          },
+          "end": {
+            "x": 78,
+            "y": 77
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 5185.8,
+          "second": 2485.8,
+          "minute": "86'",
+          "period": "2H",
+          "playerId": 7907,
+          "playerName": "D. Sturridge",
+          "eventName": "Duel",
+          "subEventName": "Ground attacking duel",
+          "start": {
+            "x": 78,
+            "y": 77
+          },
+          "end": {
+            "x": 77,
+            "y": 69
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 5187.56,
+          "second": 2487.56,
+          "minute": "86'",
+          "period": "2H",
+          "playerId": 7907,
+          "playerName": "D. Sturridge",
+          "eventName": "Shot",
+          "subEventName": "Shot",
+          "start": {
+            "x": 77,
+            "y": 69
+          },
+          "end": {
+            "x": 0,
+            "y": 0
+          },
+          "isShot": true,
+          "isGoal": false
+        }
+      ],
+      "comparison": {
+        "hyperedgeOrder": 3,
+        "graphEdgeCount": 1,
+        "potentialPairCount": 3,
+        "higherOrderDelta": 2,
+        "connectivityRatio": 0.33,
+        "progression": 77,
+        "duration": 16.47
+      }
+    },
+    {
+      "id": "phase-14",
+      "label": "2H 90' Mohamed Salah finishes the move",
+      "minute": "90'",
+      "absoluteSecond": 5439.04,
+      "period": "2H",
+      "startSecond": 5426.8,
+      "duration": 12.24,
+      "outcome": "shot",
+      "lane": "left",
+      "pattern": "through-ball move",
+      "shotPlayerId": 120353,
+      "shotPlayerName": "Mohamed Salah",
+      "players": [
+        8319,
+        120353,
+        7964
+      ],
+      "uniquePlayerCount": 3,
+      "eventCount": 6,
+      "progression": 47,
+      "impactScore": 65,
+      "links": [
+        {
+          "source": 8319,
+          "target": 120353,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 120353,
+          "target": 8319,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 8319,
+          "target": 7964,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 7964,
+          "target": 8319,
+          "kind": "pass",
+          "subEventName": "Simple pass"
+        },
+        {
+          "source": 8319,
+          "target": 120353,
+          "kind": "pass",
+          "subEventName": "Smart pass"
+        }
+      ],
+      "events": [
+        {
+          "absoluteSecond": 5426.8,
+          "second": 2726.8,
+          "minute": "90'",
+          "period": "2H",
+          "playerId": 8319,
+          "playerName": "J. Milner",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 46,
+            "y": 20
+          },
+          "end": {
+            "x": 65,
+            "y": 16
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 5431.45,
+          "second": 2731.45,
+          "minute": "90'",
+          "period": "2H",
+          "playerId": 120353,
+          "playerName": "Mohamed Salah",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 65,
+            "y": 16
+          },
+          "end": {
+            "x": 53,
+            "y": 10
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 5433.03,
+          "second": 2733.03,
+          "minute": "90'",
+          "period": "2H",
+          "playerId": 8319,
+          "playerName": "J. Milner",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 53,
+            "y": 10
+          },
+          "end": {
+            "x": 60,
+            "y": 17
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 5434.81,
+          "second": 2734.81,
+          "minute": "90'",
+          "period": "2H",
+          "playerId": 7964,
+          "playerName": "J. Henderson",
+          "eventName": "Pass",
+          "subEventName": "Simple pass",
+          "start": {
+            "x": 60,
+            "y": 17
+          },
+          "end": {
+            "x": 62,
+            "y": 7
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 5436.48,
+          "second": 2736.48,
+          "minute": "90'",
+          "period": "2H",
+          "playerId": 8319,
+          "playerName": "J. Milner",
+          "eventName": "Pass",
+          "subEventName": "Smart pass",
+          "start": {
+            "x": 62,
+            "y": 7
+          },
+          "end": {
+            "x": 93,
+            "y": 30
+          },
+          "isShot": false,
+          "isGoal": false
+        },
+        {
+          "absoluteSecond": 5439.04,
+          "second": 2739.04,
+          "minute": "90'",
+          "period": "2H",
+          "playerId": 120353,
+          "playerName": "Mohamed Salah",
+          "eventName": "Shot",
+          "subEventName": "Shot",
+          "start": {
+            "x": 93,
+            "y": 30
+          },
+          "end": {
+            "x": 0,
+            "y": 0
+          },
+          "isShot": true,
+          "isGoal": false
+        }
+      ],
+      "comparison": {
+        "hyperedgeOrder": 3,
+        "graphEdgeCount": 5,
+        "potentialPairCount": 3,
+        "higherOrderDelta": 0,
+        "connectivityRatio": 1.67,
+        "progression": 47,
+        "duration": 12.24
+      }
+    }
+  ],
+  "chapters": [
+    {
+      "id": "overview",
+      "title": "Match Overview",
+      "mode": "story",
+      "phaseIds": [
+        "phase-08",
+        "phase-12",
+        "phase-09",
+        "phase-11",
+        "phase-10",
+        "phase-13",
+        "phase-03",
+        "phase-07"
+      ],
+      "summary": "Liverpool's strongest attacking moves usually involve four to six players before the shot. In hypergraph mode, those group actions stay visible as one coordinated relation instead of being flattened into isolated pass links.",
+      "annotations": []
+    },
+    {
+      "id": "firmino-opener",
+      "title": "Firmino Opener",
+      "mode": "story",
+      "phaseIds": [
+        "phase-03"
+      ],
+      "summary": "The opening goal emerges from a right-side overload: Gomez steps up, Salah keeps the ball alive, Can recycles the attack, and Firmino finishes the cross.",
+      "annotations": [
+        {
+          "playerId": 257899,
+          "title": "Gomez supplies the width",
+          "body": "Liverpool keep the overload alive through a repeat wide involvement before the final delivery.",
+          "kind": "build"
+        },
+        {
+          "playerId": 15808,
+          "title": "Firmino attacks the final gap",
+          "body": "The finish completes a four-player action that is clearer as one coordinated hyperedge than as isolated pass links.",
+          "kind": "finish"
+        }
+      ]
+    },
+    {
+      "id": "mane-overload",
+      "title": "Mane Through the Left Half-Space",
+      "mode": "story",
+      "phaseIds": [
+        "phase-08"
+      ],
+      "summary": "Liverpool move the ball through Gomez, Wijnaldum, Can, and Firmino before Mane attacks the inside-left lane. This is a clean five-player hyperedge.",
+      "annotations": [
+        {
+          "playerId": 257899,
+          "title": "The move starts deep and climbs in layers",
+          "body": "Liverpool advance through successive supporting touches before Mane receives the final attacking advantage.",
+          "kind": "build"
+        },
+        {
+          "playerId": 25747,
+          "title": "Mane attacks the inside-left channel",
+          "body": "This chapter works well as a higher-order relation because the danger comes from the group shape, not only the final shot.",
+          "kind": "finish"
+        }
+      ]
+    },
+    {
+      "id": "salah-transition",
+      "title": "Salah in Transition",
+      "mode": "story",
+      "phaseIds": [
+        "phase-09"
+      ],
+      "summary": "This move is intentionally sparse. Hypergraph mode collapses almost to a graph, showing how a direct transition differs from Liverpool's multi-player buildup patterns.",
+      "annotations": [
+        {
+          "playerId": 120353,
+          "title": "Transition becomes almost pairwise",
+          "body": "This phase is intentionally sparse, which makes it useful for contrasting graph and hypergraph views.",
+          "kind": "compare"
+        }
+      ]
+    },
+    {
+      "id": "sturridge-finish",
+      "title": "Late Cross, Late Finish",
+      "mode": "story",
+      "phaseIds": [
+        "phase-12"
+      ],
+      "summary": "The fourth goal combines Firmino's layoff, Can's acceleration, Salah's cross, and Sturridge's finish. It is a textbook higher-order action group built from multiple roles.",
+      "annotations": [
+        {
+          "playerId": 120353,
+          "title": "Salah creates the final delivery",
+          "body": "The cross is only one step in a multi-role sequence that spans buildup, burst, delivery, and finish.",
+          "kind": "build"
+        },
+        {
+          "playerId": 7907,
+          "title": "Sturridge finishes the hyperedge",
+          "body": "The final shot closes a dense, high-order action that feels more complete as one group relation.",
+          "kind": "finish"
+        }
+      ]
+    },
+    {
+      "id": "explore",
+      "title": "Free Explore",
+      "mode": "explore",
+      "phaseIds": [
+        "phase-01",
+        "phase-02",
+        "phase-03",
+        "phase-04",
+        "phase-05",
+        "phase-06",
+        "phase-07",
+        "phase-08",
+        "phase-09",
+        "phase-10",
+        "phase-11",
+        "phase-12",
+        "phase-13",
+        "phase-14"
+      ],
+      "summary": "Switch filters, compare graph versus hypergraph views, and inspect how the player group changes from one Liverpool attacking phase to the next.",
+      "annotations": []
+    }
+  ],
+  "summary": {
+    "selectedPhaseCount": 14,
+    "goalPhaseCount": 4,
+    "highestOrder": 6,
+    "averagePhaseSize": 4.29,
+    "topPlayers": [
+      {
+        "playerId": 18550,
+        "name": "E. Can",
+        "phaseCount": 8
+      },
+      {
+        "playerId": 120353,
+        "name": "Mohamed Salah",
+        "phaseCount": 8
+      },
+      {
+        "playerId": 15808,
+        "name": "Roberto Firmino",
+        "phaseCount": 8
+      },
+      {
+        "playerId": 257899,
+        "name": "J. Gomez",
+        "phaseCount": 7
+      },
+      {
+        "playerId": 25747,
+        "name": "S. Mané",
+        "phaseCount": 5
+      },
+      {
+        "playerId": 116,
+        "name": "G. Wijnaldum",
+        "phaseCount": 5
+      }
+    ],
+    "topEdges": [
+      {
+        "source": 18550,
+        "sourceName": "E. Can",
+        "target": 120353,
+        "targetName": "Mohamed Salah",
+        "count": 3
+      },
+      {
+        "source": 18550,
+        "sourceName": "E. Can",
+        "target": 15808,
+        "targetName": "Roberto Firmino",
+        "count": 3
+      },
+      {
+        "source": 257899,
+        "sourceName": "J. Gomez",
+        "target": 18550,
+        "targetName": "E. Can",
+        "count": 3
+      },
+      {
+        "source": 120353,
+        "sourceName": "Mohamed Salah",
+        "target": 25747,
+        "targetName": "S. Mané",
+        "count": 2
+      },
+      {
+        "source": 116,
+        "sourceName": "G. Wijnaldum",
+        "target": 18550,
+        "targetName": "E. Can",
+        "count": 2
+      },
+      {
+        "source": 15808,
+        "sourceName": "Roberto Firmino",
+        "target": 18550,
+        "targetName": "E. Can",
+        "count": 2
+      }
+    ],
+    "topGroups": [
+      {
+        "players": [
+          18550,
+          120353,
+          14870,
+          25747,
+          4908
+        ],
+        "playerNames": [
+          "E. Can",
+          "Mohamed Salah",
+          "J. Matip",
+          "S. Mané",
+          "Alberto Moreno"
+        ],
+        "count": 1
+      },
+      {
+        "players": [
+          25747,
+          116,
+          4908,
+          18550,
+          15808,
+          120353
+        ],
+        "playerNames": [
+          "S. Mané",
+          "G. Wijnaldum",
+          "Alberto Moreno",
+          "E. Can",
+          "Roberto Firmino",
+          "Mohamed Salah"
+        ],
+        "count": 1
+      },
+      {
+        "players": [
+          257899,
+          120353,
+          18550,
+          15808
+        ],
+        "playerNames": [
+          "J. Gomez",
+          "Mohamed Salah",
+          "E. Can",
+          "Roberto Firmino"
+        ],
+        "count": 1
+      },
+      {
+        "players": [
+          14870,
+          18550,
+          116,
+          120353
+        ],
+        "playerNames": [
+          "J. Matip",
+          "E. Can",
+          "G. Wijnaldum",
+          "Mohamed Salah"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  "summaryBreakdown": {
+    "outcomes": {
+      "shot": 10,
+      "goal": 4
+    },
+    "lanes": {
+      "center": 6,
+      "left": 5,
+      "right": 3
+    },
+    "patterns": {
+      "wide delivery": 4,
+      "combination play": 5,
+      "layered buildup": 1,
+      "direct break": 1,
+      "through-ball move": 2,
+      "vertical burst": 1
+    },
+    "phaseSizeAverage": 4.29
+  },
+  "presentation": {
+    "autoplayOrder": [
+      "overview",
+      "firmino-opener",
+      "mane-overload",
+      "salah-transition",
+      "sturridge-finish"
+    ],
+    "defaultSpeedMs": 3200
+  }
+}

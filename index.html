@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liverpool Hyperedge Storyboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Data Visualization · Hypergraph Storyboard</p>
+          <h1>Liverpool's Coordinated Attacks as Hyperedges</h1>
+          <p class="hero-intro">
+            A single-match interactive visualization built around Liverpool's 4-0 win over Arsenal.
+            Each highlighted shape is one higher-order attacking phase: a coordinated group action that
+            cannot be fully explained by pairwise pass links alone.
+          </p>
+          <div class="hero-controls" id="mode-switch"></div>
+          <div class="presentation-controls" id="presentation-controls"></div>
+        </div>
+
+        <div class="scorecard">
+          <div class="scorecard-top">
+            <span id="match-title">Liverpool 4-0 Arsenal</span>
+            <span id="match-meta">Premier League 2017/18 · Anfield</span>
+          </div>
+          <div class="scoreline">
+            <div class="team-box">
+              <span class="team-name">Liverpool</span>
+              <strong>4</strong>
+            </div>
+            <div class="score-divider"></div>
+            <div class="team-box muted">
+              <span class="team-name">Arsenal</span>
+              <strong>0</strong>
+            </div>
+          </div>
+          <div class="stat-row" id="summary-strip"></div>
+        </div>
+      </header>
+
+      <main class="main-grid">
+        <section class="viz-card arena">
+          <div class="card-topline">
+            <div>
+              <p class="mini-label">Canvas</p>
+              <h2>Hypergraph vs Graph</h2>
+            </div>
+            <div class="segmented" id="view-switch"></div>
+          </div>
+          <p class="canvas-caption" id="chapter-summary"></p>
+          <div class="pitch-stage">
+            <svg id="pitch-svg" viewBox="0 0 960 620" role="img" aria-label="Liverpool attacking hypergraph"></svg>
+          </div>
+          <div class="canvas-foot">
+            <div class="legend-note">
+              <span class="legend-swatch hyper"></span>
+              <span>Hypergraph: one filled shape equals one coordinated attacking phase.</span>
+            </div>
+            <div class="legend-note">
+              <span class="legend-swatch graph"></span>
+              <span>Graph: pairwise pass skeleton extracted from the same phase.</span>
+            </div>
+          </div>
+          <div class="spotlight-grid">
+            <section class="spotlight-panel">
+              <div class="spotlight-head">
+                <div>
+                  <p class="mini-label">Tactical Takeaway</p>
+                  <h3>Why This Phase Matters</h3>
+                </div>
+              </div>
+              <div class="comparison-box" id="comparison-box"></div>
+              <div class="metric-stack" id="comparison-metrics"></div>
+            </section>
+
+            <section class="spotlight-panel">
+              <div class="spotlight-head">
+                <div>
+                  <p class="mini-label">Annotations</p>
+                  <h3>Story Callouts</h3>
+                </div>
+              </div>
+              <div class="annotation-list" id="annotation-list"></div>
+            </section>
+          </div>
+        </section>
+
+        <aside class="sidebar">
+          <section class="viz-card side-card">
+            <div class="card-topline">
+              <div>
+                <p class="mini-label">Story</p>
+                <h2>Chapters</h2>
+              </div>
+            </div>
+            <div class="chapter-stack" id="chapter-list"></div>
+          </section>
+
+          <section class="viz-card side-card presentation-panel">
+            <div class="card-topline">
+              <div>
+                <p class="mini-label">Demo</p>
+                <h2>Presentation Mode</h2>
+              </div>
+            </div>
+            <div class="presentation-copy">
+              Use autoplay or step controls to walk through the match like a short explainer, then switch to free explore for questions.
+            </div>
+            <div class="takeaway-box" id="takeaway-box"></div>
+          </section>
+
+          <section class="viz-card side-card">
+            <div class="card-topline">
+              <div>
+                <p class="mini-label">Filters</p>
+                <h2>Explore Controls</h2>
+              </div>
+            </div>
+            <div class="filter-area">
+              <div class="filter-group">
+                <span class="filter-label">Outcome</span>
+                <div class="chip-row" id="outcome-filters"></div>
+              </div>
+              <div class="filter-group">
+                <span class="filter-label">Lane</span>
+                <div class="chip-row" id="lane-filters"></div>
+              </div>
+              <div class="filter-group">
+                <span class="filter-label">Pattern</span>
+                <div class="chip-row" id="pattern-filters"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="viz-card side-card">
+            <div class="card-topline">
+              <div>
+                <p class="mini-label">Details</p>
+                <h2>Selected Phase</h2>
+              </div>
+            </div>
+            <div id="phase-detail" class="phase-detail"></div>
+          </section>
+        </aside>
+      </main>
+
+      <section class="bottom-grid">
+        <section class="viz-card bottom-card">
+          <div class="card-topline">
+            <div>
+              <p class="mini-label">Timeline</p>
+              <h2>Attacking Phases</h2>
+            </div>
+          </div>
+          <div id="timeline" class="timeline"></div>
+        </section>
+
+        <section class="viz-card bottom-card">
+          <div class="card-topline">
+            <div>
+              <p class="mini-label">Players</p>
+              <h2>Involvement Ranking</h2>
+            </div>
+            <div class="keyboard-hint">Keyboard: ← → to switch phases, G/H/B to switch view</div>
+          </div>
+          <div id="player-list" class="player-list"></div>
+        </section>
+
+        <section class="viz-card bottom-card analytics-panel">
+          <div class="card-topline">
+            <div>
+              <p class="mini-label">Overview Analytics</p>
+              <h2>Phase Distributions</h2>
+            </div>
+          </div>
+          <div id="mini-analytics" class="mini-analytics"></div>
+        </section>
+      </section>
+    </div>
+
+    <script src="./data/liverpool_hypergraph_story.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
