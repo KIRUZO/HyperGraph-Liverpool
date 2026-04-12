@@ -240,17 +240,17 @@ function renderSummaryStrip() {
   const patternLeader = Object.entries(DATA.summaryBreakdown.patterns)
     .sort((left, right) => right[1] - left[1])[0]?.[0] ?? "combination play";
   const stats = [
-    { label: "Hyperedges", value: DATA.summary.selectedPhaseCount },
-    { label: "Goal-ending phases", value: DATA.summary.goalPhaseCount },
-    { label: "Dominant lane", value: laneLeader },
-    { label: "Main pattern", value: patternLeader },
+    { label: "Hyperedges", value: DATA.summary.selectedPhaseCount, note: "shot-ending group actions", accent: "hyper" },
+    { label: "Goal phases", value: DATA.summary.goalPhaseCount, note: "chapters that finish the move", accent: "goal" },
+    { label: "Dominant lane", value: titleCaseLabel(laneLeader), note: "most repeated spatial channel", accent: "graph" },
+    { label: "Main pattern", value: titleCaseLabel(patternLeader), note: "most common attacking template", accent: "amber" },
   ];
 
   elements.summaryStrip.innerHTML = "";
   stats.forEach((stat) => {
     const pill = document.createElement("div");
-    pill.className = "stat-pill";
-    pill.innerHTML = `<span>${stat.label}</span><strong>${stat.value}</strong>`;
+    pill.className = `stat-pill ${stat.accent ?? ""}`;
+    pill.innerHTML = `<span>${stat.label}</span><strong>${stat.value}</strong><small>${stat.note}</small>`;
     elements.summaryStrip.appendChild(pill);
   });
 }
@@ -324,7 +324,7 @@ function renderFilterRow(container, values, activeValue, onClick) {
     const chip = document.createElement("button");
     chip.type = "button";
     chip.className = `chip${activeValue === value ? " active" : ""}`;
-    chip.textContent = value === "all" ? "All" : value;
+    chip.textContent = value === "all" ? "All" : titleCaseLabel(value);
     chip.addEventListener("click", () => onClick(value));
     container.appendChild(chip);
   });
@@ -341,7 +341,7 @@ function renderPhaseDetail() {
     `${phase.uniquePlayerCount}-player hyperedge`,
     `${phase.eventCount} actions`,
     `${phase.links.length} pairwise links`,
-    `${phase.progression >= 0 ? "+" : ""}${phase.progression} x progression`,
+    `${phase.progression >= 0 ? "+" : ""}${phase.progression} progression`,
   ].join(" · ");
 
   const playerButtons = phase.players
@@ -354,11 +354,14 @@ function renderPhaseDetail() {
 
   const eventLines = phase.events
     .map(
-      (event) => `
+      (event, index) => `
         <div class="event-line">
-          <div>${formatPhaseTime(event.second)}</div>
-          <div>
-            <strong>${event.playerName}</strong>
+          <div class="event-index">${`${index + 1}`.padStart(2, "0")}</div>
+          <div class="event-copy">
+            <div class="event-row-top">
+              <strong>${event.playerName}</strong>
+              <time>${formatPhaseTime(event.second)}</time>
+            </div>
             <span>${event.subEventName}${event.isGoal ? " · Goal" : event.isShot ? " · Shot" : ""}</span>
           </div>
         </div>
@@ -372,17 +375,29 @@ function renderPhaseDetail() {
         <p class="mini-label">${phase.minute} · ${phase.period}</p>
         <h3>${phase.shotPlayerName}</h3>
       </div>
-      <div class="meta-badge ${phase.outcome === "goal" ? "goal" : ""}">${phase.outcome}</div>
+      <div class="meta-badge ${phase.outcome === "goal" ? "goal" : ""}">${titleCaseLabel(phase.outcome)}</div>
     </div>
-    <p>${summary}</p>
+    <div class="detail-summary">${summary}</div>
     <div class="phase-meta">
-      <div class="meta-badge">${phase.pattern}</div>
-      <div class="meta-badge">${phase.lane} lane</div>
+      <div class="meta-badge">${titleCaseLabel(phase.pattern)}</div>
+      <div class="meta-badge">${titleCaseLabel(phase.lane)} lane</div>
       <div class="meta-badge">${phase.duration.toFixed(1)} seconds</div>
       <div class="meta-badge">${phase.comparison.higherOrderDelta} missed pair relations</div>
     </div>
-    <div class="player-token-row">${playerButtons}</div>
-    <div class="phase-events">${eventLines}</div>
+    <div class="detail-section">
+      <div class="detail-section-head">
+        <span>Involved Players</span>
+        <strong>${phase.uniquePlayerCount}</strong>
+      </div>
+      <div class="player-token-row">${playerButtons}</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-section-head">
+        <span>Action Sequence</span>
+        <strong>${phase.eventCount} steps</strong>
+      </div>
+      <div class="phase-events">${eventLines}</div>
+    </div>
   `;
 
   elements.phaseDetail.querySelectorAll("[data-player]").forEach((button) => {
@@ -406,7 +421,24 @@ function renderTimeline() {
     const button = document.createElement("button");
     button.type = "button";
     button.className = `timeline-card${state.selectedPhaseId === phase.id ? " active" : ""}`;
-    button.innerHTML = `<strong>${phase.minute} · ${phase.shotPlayerName}</strong><span>${phase.uniquePlayerCount} players · ${phase.pattern}</span>`;
+    button.innerHTML = `
+      <div class="timeline-top">
+        <div>
+          <span class="timeline-minute">${phase.minute}</span>
+          <strong>${phase.shotPlayerName}</strong>
+        </div>
+        <span class="timeline-badge ${phase.outcome}">${titleCaseLabel(phase.outcome)}</span>
+      </div>
+      <span class="timeline-subline">${titleCaseLabel(phase.pattern)} · ${titleCaseLabel(phase.lane)} lane</span>
+      <div class="timeline-meter">
+        <div class="timeline-meter-fill ${phase.outcome}" style="width:${phaseIntensity(phase)}%"></div>
+      </div>
+      <div class="timeline-meta-row">
+        <span>${phase.uniquePlayerCount} players</span>
+        <span>${phase.eventCount} actions</span>
+        <span>${phase.links.length} links</span>
+      </div>
+    `;
     button.addEventListener("click", () => {
       state.selectedPhaseId = phase.id;
       renderAll();
@@ -429,13 +461,29 @@ function renderPlayerList() {
     .map(([playerId, count]) => ({ player: PLAYER_MAP.get(playerId), count }));
 
   elements.playerList.innerHTML = "";
-  players.forEach(({ player, count }) => {
+  if (!players.length) {
+    elements.playerList.innerHTML = `<div class="empty-state">No player remains visible under the current filters.</div>`;
+    return;
+  }
+  const maxCount = Math.max(...players.map(({ count }) => count), 1);
+  players.forEach(({ player, count }, index) => {
     const wrapper = document.createElement("div");
     wrapper.className = "player-item";
     const button = document.createElement("button");
+    const share = Math.round((count / maxCount) * 100);
     button.type = "button";
-    button.className = state.activePlayerId === player.id ? "active" : "";
-    button.innerHTML = `<strong>${player.name}</strong><span>${player.role} · ${count} visible phases · avg position ${Math.round(player.avgX)}, ${Math.round(player.avgY)}</span>`;
+    button.className = `player-card-button${state.activePlayerId === player.id ? " active" : ""}`;
+    button.innerHTML = `
+      <div class="player-card-top">
+        <span class="player-rank">${`${index + 1}`.padStart(2, "0")}</span>
+        <span class="player-card-badge">${count} phases</span>
+      </div>
+      <strong>${player.name}</strong>
+      <span class="player-card-meta">${player.role} · avg position ${Math.round(player.avgX)}, ${Math.round(player.avgY)}</span>
+      <div class="player-meter">
+        <div class="player-meter-fill" style="width:${share}%"></div>
+      </div>
+    `;
     button.addEventListener("click", () => {
       state.activePlayerId = state.activePlayerId === player.id ? null : player.id;
       if (state.mode === "explore") {
@@ -460,6 +508,7 @@ function renderNarrativeCopy() {
   elements.chapterSummary.textContent = chapter.summary;
 
   const metrics = phase.comparison;
+  const headline = metrics.higherOrderDelta <= 1 ? "Near-graph attacking phase" : "Higher-order coordination stays visible";
   const directness =
     metrics.higherOrderDelta <= 1
       ? "This move is structurally close to a normal pass graph, which is why the two views feel similar."
@@ -469,7 +518,7 @@ function renderNarrativeCopy() {
       ? ` The current focus highlights ${PLAYER_MAP.get(state.activePlayerId).name}'s role inside the same coordinated action.`
       : "";
 
-  elements.comparisonBox.textContent = `${directness}${playerFocus}`;
+  elements.comparisonBox.innerHTML = `<strong>${headline}</strong><p>${directness}${playerFocus}</p>`;
 }
 
 function renderComparisonMetrics() {
@@ -481,17 +530,17 @@ function renderComparisonMetrics() {
 
   const metrics = phase.comparison;
   const tiles = [
-    { label: "Hyperedge order", value: metrics.hyperedgeOrder, accent: "hyper" },
-    { label: "Graph edges", value: metrics.graphEdgeCount, accent: "graph" },
-    { label: "Higher-order delta", value: metrics.higherOrderDelta, accent: "amber" },
-    { label: "Connectivity ratio", value: metrics.connectivityRatio, accent: "graph" },
+    { label: "Hyperedge order", value: metrics.hyperedgeOrder, note: "players inside the coordinated action", accent: "hyper" },
+    { label: "Graph edges", value: metrics.graphEdgeCount, note: "visible pairwise links after flattening", accent: "graph" },
+    { label: "Higher-order delta", value: metrics.higherOrderDelta, note: "relations lost when the group is reduced", accent: "amber" },
+    { label: "Connectivity ratio", value: formatMetricValue(metrics.connectivityRatio), note: "density of the graph baseline", accent: "graph" },
   ];
 
   elements.comparisonMetrics.innerHTML = "";
   tiles.forEach((tile) => {
     const item = document.createElement("div");
     item.className = `metric-tile ${tile.accent}`;
-    item.innerHTML = `<span>${tile.label}</span><strong>${tile.value}</strong>`;
+    item.innerHTML = `<span>${tile.label}</span><strong>${tile.value}</strong><small>${tile.note}</small>`;
     elements.comparisonMetrics.appendChild(item);
   });
 }
@@ -515,7 +564,10 @@ function renderAnnotations() {
     card.innerHTML = `
       <div class="annotation-number">${index + 1}</div>
       <div>
-        <strong>${annotation.title}</strong>
+        <div class="annotation-card-top">
+          <strong>${annotation.title}</strong>
+          <span class="annotation-kind">${titleCaseLabel(annotation.kind ?? "build")}</span>
+        </div>
         <p>${annotation.body}</p>
       </div>
     `;
@@ -529,10 +581,24 @@ function renderAnnotations() {
 
 function renderMiniAnalytics() {
   const sections = [
-    { title: "Outcomes", data: DATA.summaryBreakdown.outcomes, keys: ["goal", "shot"] },
-    { title: "Lanes", data: DATA.summaryBreakdown.lanes, keys: ["left", "center", "right"] },
+    {
+      title: "Outcomes",
+      description: "How often the highlighted phases finish with a goal instead of only a shot.",
+      slug: "outcomes",
+      data: DATA.summaryBreakdown.outcomes,
+      keys: ["goal", "shot"],
+    },
+    {
+      title: "Lanes",
+      description: "Which corridor Liverpool most often uses to carry the attack forward.",
+      slug: "lanes",
+      data: DATA.summaryBreakdown.lanes,
+      keys: ["left", "center", "right"],
+    },
     {
       title: "Patterns",
+      description: "Recurring tactical templates inferred from the event sequence.",
+      slug: "patterns",
       data: DATA.summaryBreakdown.patterns,
       keys: Object.keys(DATA.summaryBreakdown.patterns).sort((left, right) => DATA.summaryBreakdown.patterns[right] - DATA.summaryBreakdown.patterns[left]),
     },
@@ -541,16 +607,21 @@ function renderMiniAnalytics() {
   elements.miniAnalytics.innerHTML = "";
   sections.forEach((section) => {
     const maxValue = Math.max(...section.keys.map((key) => section.data[key] ?? 0), 1);
+    const total = Math.max(section.keys.reduce((sum, key) => sum + (section.data[key] ?? 0), 0), 1);
     const block = document.createElement("div");
-    block.className = "mini-chart";
-    block.innerHTML = `<h3>${section.title}</h3>`;
+    block.className = `mini-chart mini-chart-${section.slug}`;
+    block.innerHTML = `<h3>${section.title}</h3><p>${section.description}</p>`;
     section.keys.forEach((key) => {
       const value = section.data[key] ?? 0;
+      const share = Math.round((value / total) * 100);
       const row = document.createElement("div");
       row.className = "distribution-row";
       row.innerHTML = `
-        <span class="distribution-label">${key}</span>
-        <div class="distribution-track"><div class="distribution-bar" style="width:${(value / maxValue) * 100}%"></div></div>
+        <div class="distribution-copy">
+          <span class="distribution-label">${titleCaseLabel(key)}</span>
+          <span class="distribution-share">${share}%</span>
+        </div>
+        <div class="distribution-track"><div class="distribution-bar ${section.slug}" style="width:${(value / maxValue) * 100}%"></div></div>
         <strong>${value}</strong>
       `;
       block.appendChild(row);
@@ -570,7 +641,18 @@ function renderTakeawayBox() {
     state.mode === "story"
       ? `Selected chapter: ${currentChapter().title}. This phase uses ${phase.uniquePlayerCount} players over ${phase.eventCount} actions and ends in a ${phase.outcome}.`
       : `Explore mode is live. The current phase travels through the ${phase.lane} lane and is tagged as ${phase.pattern}.`;
-  elements.takeawayBox.textContent = takeaway;
+  elements.takeawayBox.innerHTML = `
+    <div class="takeaway-top">
+      <strong>${state.mode === "story" ? currentChapter().title : "Explore Mode"}</strong>
+      <span>${phase.minute} · ${titleCaseLabel(phase.outcome)}</span>
+    </div>
+    <p>${takeaway}</p>
+    <div class="takeaway-tags">
+      <span>${titleCaseLabel(phase.pattern)}</span>
+      <span>${titleCaseLabel(phase.lane)} lane</span>
+      <span>${phase.uniquePlayerCount} players</span>
+    </div>
+  `;
 }
 
 function renderPitch() {
@@ -625,9 +707,30 @@ function drawPitchFrame(svg) {
   }
   svg.appendChild(stripeGroup);
 
+  svg.appendChild(
+    svgElement("rect", {
+      x: 650,
+      y: 44,
+      width: 250,
+      height: 532,
+      rx: 24,
+      fill: "rgba(255, 255, 255, 0.04)",
+    }),
+  );
+  svg.appendChild(
+    svgElement("ellipse", {
+      cx: 820,
+      cy: 310,
+      rx: 118,
+      ry: 198,
+      fill: "rgba(255, 214, 160, 0.06)",
+    }),
+  );
+
   const markings = [
     ["rect", { x: 60, y: 44, width: 840, height: 532, rx: 24, class: "pitch-line" }],
     ["line", { x1: 480, y1: 44, x2: 480, y2: 576, class: "pitch-line" }],
+    ["line", { x1: 690, y1: 44, x2: 690, y2: 576, class: "pitch-guide" }],
     ["circle", { cx: 480, cy: 310, r: 72, class: "pitch-line" }],
     ["circle", { cx: 480, cy: 310, r: 2.5, fill: "rgba(236,248,238,0.92)" }],
     ["rect", { x: 60, y: 166, width: 120, height: 288, class: "pitch-line" }],
@@ -638,6 +741,22 @@ function drawPitchFrame(svg) {
     ["circle", { cx: 804, cy: 310, r: 2.5, fill: "rgba(236,248,238,0.92)" }],
   ];
   markings.forEach(([tag, attrs]) => svg.appendChild(svgElement(tag, attrs)));
+
+  const zoneLabel = svgElement("text", {
+    x: 700,
+    y: 70,
+    class: "pitch-guide-label",
+  });
+  zoneLabel.textContent = "FINAL THIRD";
+  svg.appendChild(zoneLabel);
+
+  const attackLabel = svgElement("text", {
+    x: 822,
+    y: 560,
+    class: "attack-label",
+  });
+  attackLabel.textContent = "ATTACK →";
+  svg.appendChild(attackLabel);
 }
 
 function drawHyperedge(svg, phase, positions) {
@@ -648,9 +767,10 @@ function drawHyperedge(svg, phase, positions) {
   }
   const path = svgElement("path", {
     d: pathData,
-    class: "hyperedge-path",
+    class: `hyperedge-path${state.selectedPhaseId === phase.id ? " is-selected" : ""}`,
     fill: phaseColor(phase.id, hyperedgeAlpha(phase)),
     stroke: phaseColor(phase.id, 0.84),
+    "stroke-width": state.selectedPhaseId === phase.id ? 3.4 : 2,
   });
   svg.appendChild(path);
 }
@@ -1031,6 +1151,21 @@ function formatPhaseTime(second) {
   const minute = Math.floor(whole / 60);
   const remaining = `${whole % 60}`.padStart(2, "0");
   return `${minute}:${remaining}`;
+}
+
+function titleCaseLabel(value) {
+  return String(value)
+    .split(/[\s-]+/)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+}
+
+function phaseIntensity(phase) {
+  return clamp(Math.round(phase.progression * 1.55 + phase.links.length * 5), 26, 100);
+}
+
+function formatMetricValue(value) {
+  return typeof value === "number" ? value.toFixed(2).replace(/\.00$/, "") : value;
 }
 
 function svgElement(tag, attributes = {}) {
